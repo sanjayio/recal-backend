@@ -27,3 +27,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: deploy src/index.ts --name my-hono-app --config wrangler.jsonc
           workingDirectory: .
+          wranglerVersion: 4
