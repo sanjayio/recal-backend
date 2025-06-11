@@ -22,9 +22,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Deploy
+        id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: deploy src/index.ts --name my-hono-app --config wrangler.jsonc
-          workingDirectory: .
+          packageManager: pnpm
           wranglerVersion: 4
+          environment: dev
+      - name: print deployment-url
+        env:
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
+        run: echo $DEPLOYMENT_URL

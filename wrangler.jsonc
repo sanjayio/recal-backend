@@ -3,7 +3,15 @@
   "name": "my-hono-app",
   "main": "src/index.ts",
   "compatibility_date": "2025-06-11",
-  "minify": true
+  "minify": true,
+  "env": {
+    "dev": {
+      "route": "dev.iamsanjay.workers.dev"
+    },
+    "prod": {
+      "route": "iamsanjay.workers.dev"
+    }
+  },
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
