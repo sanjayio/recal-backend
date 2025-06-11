@@ -6,12 +6,18 @@
   "minify": true,
   "env": {
     "dev": {
-      "route": "dev.iamsanjay.workers.dev"
+      "workers_dev": true,
+      "vars": {
+        "NODE_ENV": "development"
+      }
     },
     "prod": {
-      "route": "iamsanjay.workers.dev"
+      "workers_dev": true,
+      "vars": {
+        "NODE_ENV": "production"
+      }
     }
-  },
+  }
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
