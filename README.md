@@ -36,7 +36,7 @@
 ## 🚀 Introducing Recal
 
 <p align="center"> <img src="https://github.com/sanjayio/recal-backend/blob/main/images/booking_page_screenshot.png" alt="recal screenshot" /> </p>
-**Recal is a modern, open-core scheduling platform** for automating calendar bookings, meeting workflows, and availability sharing. Inspired by tools like Calendly, Recal empowers developers and teams to self-host or use our managed SaaS offering at recal.me.
+<b>Recal is a modern, open-core scheduling platform</b> for automating calendar bookings, meeting workflows, and availability sharing. Inspired by tools like Calendly, Recal empowers developers and teams to self-host or use our managed SaaS offering at recal.me.
 
 - 🔄 Integrates with Google and Outlook calendars
 - 💬 Smart reminders, buffers, and conflict handling
