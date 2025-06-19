@@ -9,7 +9,7 @@
       "workers_dev": true,
       "vars": {
         "NODE_ENV": "development"
-      },
+      }
     },
     "prod": {
       "workers_dev": true,
@@ -17,7 +17,14 @@
         "NODE_ENV": "production"
       }
     }
-  }
+  },
+  "secrets_store_secrets": [
+    {
+      "binding": "MY_API_TOKEN",
+      "store_id": "df8f0e268e704a1a901e5c9d6aacd52b",
+      "secret_name": "MY_API_TOKEN"
+    }
+  ]
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
