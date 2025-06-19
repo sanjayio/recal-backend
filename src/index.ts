@@ -10,7 +10,7 @@ const app = new Hono<{ Bindings: Bindings }>()
 // Create a middleware that properly accesses the secret
 const authMiddleware = async (c: Context, next: Next) => {
   const token = c.req.header('Authorization')?.replace('Bearer ', '')
-  const expectedToken = await c.env.MY_API_TOKEN.get()
+  const expectedToken = c.env.MY_API_TOKEN
   
   if (!token || token !== expectedToken) {
     return c.text('Unauthorized', 401)
