@@ -43,4 +43,4 @@
 - 🔐 Built-in authentication and time zone support
 - 🛠️ Easily extensible via API
 
-Whether you're a freelancer, small business, or team—Recal gives you full control over scheduling workflows.
+Whether you're a freelancer, small business, or team — Recal gives you full control over scheduling workflows.
