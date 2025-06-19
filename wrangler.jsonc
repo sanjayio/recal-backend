@@ -8,13 +8,13 @@
     "dev": {
       "workers_dev": true,
       "vars": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "dev"
       }
     },
     "prod": {
       "workers_dev": true,
       "vars": {
-        "NODE_ENV": "production"
+        "NODE_ENV": "prod"
       }
     }
   }
