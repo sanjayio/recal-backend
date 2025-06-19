@@ -2,7 +2,7 @@ import { Hono } from 'hono'
 import { bearerAuth } from 'hono/bearer-auth'
 
 type Bindings = {
-  API_TOKEN: string
+  MY_API_TOKEN: string
 }
 
 const app = new Hono<{ Bindings: Bindings }>()
