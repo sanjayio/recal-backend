@@ -1,7 +1,8 @@
 import { Context, Hono, Next } from 'hono'
 
+
 type Bindings = {
-  API_TOKEN: string
+  MY_API_TOKEN: string
 }
 
 const app = new Hono<{ Bindings: Bindings }>()
