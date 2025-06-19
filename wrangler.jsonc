@@ -1,8 +1,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "my-hono-app",
+  "name": "recal-api",
   "main": "src/index.ts",
-  "compatibility_date": "2025-06-11",
+  "compatibility_date": "2025-05-25",
   "minify": true,
   "env": {
     "dev": {
@@ -23,7 +23,7 @@
   // ],
   // "vars": {
   //   "MY_VAR": "my-variable"
-  // },
+  // ],
   // "kv_namespaces": [
   //   {
   //     "binding": "MY_KV_NAMESPACE",

@@ -1,20 +1,30 @@
-import { Hono } from 'hono'
+import { Context, Hono, Next } from 'hono'
 import { bearerAuth } from 'hono/bearer-auth'
 
 type Bindings = {
-  API_TOKEN: string
+  MY_API_TOKEN: string
 }
 
 const app = new Hono<{ Bindings: Bindings }>()
-app.use(
-  '/api/*',
-  bearerAuth({
-    verifyToken: async (token, c) => token === c.env.MY_API_TOKEN,
-  })
-)
+
+// Create a middleware that properly accesses the secret
+const authMiddleware = async (c: Context, next: Next) => {
+  const token = c.req.header('Authorization')?.replace('Bearer ', '')
+  const expectedToken = c.env.MY_API_TOKEN
+  
+  if (!token || token !== expectedToken) {
+    return c.text('Unauthorized', 401)
+  }
+  
+  await next()
+}
+
+app.use('/api/*', authMiddleware)
+
 app.notFound((c) => {
   return c.text('Uh Oh! Not Found', 404)
 })
+
 app.onError((err, c) => {
   return c.text(`Uh Oh! Error: ${err.message}`, 500)
 })
